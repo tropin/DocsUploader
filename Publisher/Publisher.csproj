@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D71E5505-5ED3-4B62-95CC-332B7C6FD786}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Parcsis.PSD.Publisher</RootNamespace>
+    <AssemblyName>Parcsis.PSD.Publisher</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\trunk\Sources\ChangeBox\Libraries\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\WatchElement.cs" />
+    <Compile Include="Configuration\WatchSection.cs" />
+    <Compile Include="Configuration\WatchElementCollection.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="FtpClient\FTPAsynchronousConnection.cs" />
+    <Compile Include="FtpClient\FTPConnection.cs" />
+    <Compile Include="FtpClient\FTPFile.cs" />
+    <Compile Include="FtpClient\FTPFileTransferType.cs" />
+    <Compile Include="FtpClient\FTPMode.cs" />
+    <Compile Include="HeartBeat\HeartBeatService.cs" />
+    <Compile Include="HeartBeat\IHeartBeatService.cs" />
+    <Compile Include="HeartBeat\ServiceHost.cs" />
+    <Compile Include="ItemProcessors\FtpProcessor.cs" />
+    <Compile Include="ItemProcessors\HttpGetProcessor.cs" />
+    <Compile Include="ItemProcessors\MailProcessor.cs" />
+    <Compile Include="Json\Converters\BinaryConverter.cs" />
+    <Compile Include="Json\Converters\CustomCreationConverter.cs" />
+    <Compile Include="Json\Converters\HtmlColorConverter.cs" />
+    <Compile Include="Json\Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="Json\Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="Json\Converters\JsonDateTimeSerializationMode.cs" />
+    <Compile Include="Json\Converters\StringEnumConverter.cs" />
+    <Compile Include="Json\Converters\XmlNodeConverter.cs" />
+    <Compile Include="Json\DateTimeOffset.cs" />
+    <Compile Include="Json\DefaultValueHandling.cs" />
+    <Compile Include="Json\IJsonLineInfo.cs" />
+    <Compile Include="Json\JsonArrayAttribute.cs" />
+    <Compile Include="Json\JsonContainerAttribute.cs" />
+    <Compile Include="Json\JsonConvert.cs" />
+    <Compile Include="Json\JsonConverter.cs" />
+    <Compile Include="Json\JsonConverterAttribute.cs" />
+    <Compile Include="Json\JsonConverterCollection.cs" />
+    <Compile Include="Json\JsonIgnoreAttribute.cs" />
+    <Compile Include="Json\JsonObjectAttribute.cs" />
+    <Compile Include="Json\JsonPropertyAttribute.cs" />
+    <Compile Include="Json\JsonRaw.cs" />
+    <Compile Include="Json\JsonReader.cs" />
+    <Compile Include="Json\JsonReaderException.cs" />
+    <Compile Include="Json\JsonSerializationException.cs" />
+    <Compile Include="Json\JsonSerializer.cs" />
+    <Compile Include="Json\JsonSerializerSettings.cs" />
+    <Compile Include="Json\JsonTextReader.cs" />
+    <Compile Include="Json\JsonTextWriter.cs" />
+    <Compile Include="Json\JsonToken.cs" />
+    <Compile Include="Json\JsonValidatingReader.cs" />
+    <Compile Include="Json\JsonWriter.cs" />
+    <Compile Include="Json\JsonWriterException.cs" />
+    <Compile Include="Json\Linq\Extensions.cs" />
+    <Compile Include="Json\Linq\IJEnumerable.cs" />
+    <Compile Include="Json\Linq\JArray.cs" />
+    <Compile Include="Json\Linq\JConstructor.cs" />
+    <Compile Include="Json\Linq\JContainer.cs" />
+    <Compile Include="Json\Linq\JEnumerable.cs" />
+    <Compile Include="Json\Linq\JObject.cs" />
+    <Compile Include="Json\Linq\JProperty.cs" />
+    <Compile Include="Json\Linq\JToken.cs" />
+    <Compile Include="Json\Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="Json\Linq\JTokenReader.cs" />
+    <Compile Include="Json\Linq\JTokenType.cs" />
+    <Compile Include="Json\Linq\JTokenWriter.cs" />
+    <Compile Include="Json\Linq\JValue.cs" />
+    <Compile Include="Json\MemberSerialization.cs" />
+    <Compile Include="Json\MissingMemberHandling.cs" />
+    <Compile Include="Json\NullValueHandling.cs" />
+    <Compile Include="Json\ObjectCreationHandling.cs" />
+    <Compile Include="Json\PreserveReferencesHandling.cs" />
+    <Compile Include="Json\ReferenceLoopHandling.cs" />
+    <Compile Include="Json\Schema\Extensions.cs" />
+    <Compile Include="Json\Schema\JsonSchema.cs" />
+    <Compile Include="Json\Schema\JsonSchemaBuilder.cs" />
+    <Compile Include="Json\Schema\JsonSchemaConstants.cs" />
+    <Compile Include="Json\Schema\JsonSchemaException.cs" />
+    <Compile Include="Json\Schema\JsonSchemaGenerator.cs" />
+    <Compile Include="Json\Schema\JsonSchemaModel.cs" />
+    <Compile Include="Json\Schema\JsonSchemaModelBuilder.cs" />
+    <Compile Include="Json\Schema\JsonSchemaNode.cs" />
+    <Compile Include="Json\Schema\JsonSchemaNodeCollection.cs" />
+    <Compile Include="Json\Schema\JsonSchemaResolver.cs" />
+    <Compile Include="Json\Schema\JsonSchemaType.cs" />
+    <Compile Include="Json\Schema\JsonSchemaWriter.cs" />
+    <Compile Include="Json\Schema\UndefinedSchemaIdHandling.cs" />
+    <Compile Include="Json\Schema\ValidationEventArgs.cs" />
+    <Compile Include="Json\Schema\ValidationEventHandler.cs" />
+    <Compile Include="Json\SerializationBinder.cs" />
+    <Compile Include="Json\Serialization\CachedAttributeGetter.cs" />
+    <Compile Include="Json\Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Json\Serialization\DefaultContractResolver.cs" />
+    <Compile Include="Json\Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="Json\Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="Json\Serialization\ExperimentalSerializer\Serialization.cs" />
+    <Compile Include="Json\Serialization\IContractResolver.cs" />
+    <Compile Include="Json\Serialization\IReferenceResolver.cs" />
+    <Compile Include="Json\Serialization\JsonArrayContract.cs" />
+    <Compile Include="Json\Serialization\JsonContract.cs" />
+    <Compile Include="Json\Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="Json\Serialization\JsonObjectContract.cs" />
+    <Compile Include="Json\Serialization\JsonProperty.cs" />
+    <Compile Include="Json\Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="Json\Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="Json\Serialization\JsonSerializerReader.cs" />
+    <Compile Include="Json\Serialization\JsonSerializerWriter.cs" />
+    <Compile Include="Json\Serialization\JsonTypeReflector.cs" />
+    <Compile Include="Json\TypeNameHandling.cs" />
+    <Compile Include="Json\Utilities\BidirectionalDictionary.cs" />
+    <Compile Include="Json\Utilities\CollectionUtils.cs" />
+    <Compile Include="Json\Utilities\CollectionWrapper.cs" />
+    <Compile Include="Json\Utilities\ConvertUtils.cs" />
+    <Compile Include="Json\Utilities\DateTimeUtils.cs" />
+    <Compile Include="Json\Utilities\DictionaryWrapper.cs" />
+    <Compile Include="Json\Utilities\EnumUtils.cs" />
+    <Compile Include="Json\Utilities\EnumValue.cs" />
+    <Compile Include="Json\Utilities\EnumValues.cs" />
+    <Compile Include="Json\Utilities\JavaScriptUtils.cs" />
+    <Compile Include="Json\Utilities\ListWrapper.cs" />
+    <Compile Include="Json\Utilities\MathUtils.cs" />
+    <Compile Include="Json\Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="Json\Utilities\ReflectionUtils.cs" />
+    <Compile Include="Json\Utilities\StringBuffer.cs" />
+    <Compile Include="Json\Utilities\StringUtils.cs" />
+    <Compile Include="Json\Utilities\ThreadSafeStore.cs" />
+    <Compile Include="Json\Utilities\ValidationUtils.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishQueueWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PublishQueueWindow.Designer.cs">
+      <DependentUpon>PublishQueueWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueueProcessor\IQueueElementProcessor.cs" />
+    <Compile Include="QueueProcessor\ItemProcessorsAcessor.cs" />
+    <Compile Include="QueueProcessor\NotifyProcessor.cs" />
+    <Compile Include="QueueProcessor\QueueProcessorBase.cs" />
+    <Compile Include="Queue\BaseXmlSaveable.cs" />
+    <Compile Include="Queue\DataContract.cs" />
+    <Compile Include="Queue\ItemStatus.cs" />
+    <Compile Include="Queue\QueueItem.cs" />
+    <Compile Include="Queue\QueueHolder.cs" />
+    <Compile Include="Queue\XmlStorage.cs" />
+    <Compile Include="ResponseStatus.cs" />
+    <Compile Include="SourceWatcher\ErrorArgs.cs" />
+    <Compile Include="SourceWatcher\FileWatcher.cs" />
+    <Compile Include="SourceWatcher\NeedActionArgs.cs" />
+    <Compile Include="SourceWatcher\NeedDeleteArgs.cs" />
+    <Compile Include="SystemService\HostService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemService\HostServiceInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemService\ServiceState.cs" />
+    <Compile Include="SystemService\ServiceStatus.cs" />
+    <Compile Include="TraceListeners\RollingFileListener.cs" />
+    <Compile Include="TraceListeners\SyncDictionary.cs" />
+    <Compile Include="TraceListeners\TraceWriterFactrory.cs" />
+    <Compile Include="TraceListeners\WriterChunk.cs" />
+    <Compile Include="WebParameterDictionary.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PublishQueueWindow.resx">
+      <DependentUpon>PublishQueueWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Parcsis.PSD.Publisher.Queue.QueueItem.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

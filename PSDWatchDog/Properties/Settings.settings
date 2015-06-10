@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Parcsis.PSD.Publisher.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServiceMachine" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.</Value>
+    </Setting>
+    <Setting Name="ServiceName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PSD Publisher</Value>
+    </Setting>
+    <Setting Name="BeatInterval" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:00:05</Value>
+    </Setting>
+    <Setting Name="BeatServiceAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">net.pipe://localhost/PSDPublisherHeartBeat</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Parcsis.PSD.Publisher.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StateHolderFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SendQueue.xml</Value>
+    </Setting>
+    <Setting Name="QueueProcessorInterval" Type="System.Int64" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="FtpUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tropin</Value>
+    </Setting>
+    <Setting Name="FtpPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">6OxWodIdAl</Value>
+    </Setting>
+    <Setting Name="FtpTargetFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Video</Value>
+    </Setting>
+    <Setting Name="FtpHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">labs.pravo.ru</Value>
+    </Setting>
+    <Setting Name="HttpGetAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://presidium.parcsis.net:84/</Value>
+    </Setting>
+    <Setting Name="RetryCountPerProcessor" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="AdminMails" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">maden@csharper.ru</Value>
+    </Setting>
+    <Setting Name="AdminMailContent" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Обвалилась отправка элемента {0} по причине ошибок в процессорах {1}</Value>
+    </Setting>
+    <Setting Name="AdminMailSubject" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Сервис PSD Publisher, ошибка публикации</Value>
+    </Setting>
+    <Setting Name="ConcurentFTPConnectionsCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
